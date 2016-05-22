@@ -12,28 +12,28 @@ int main() {
     return 0;
 }
 
-void appMenu(){
+void appMenu() {
     unsigned command = 1;
     char src[30];
     char srcText[30];
     char dest[30];
 
-    while(command != 0){
+    while (command != 0) {
         printf("\nMENU - type number and click enter"
-               "\n0.Exit"
-               "\n1.Hide message in png file"
-               "\n2.Read message from png file"
-               "\nI choose: ");
+                       "\n0.Exit"
+                       "\n1.Hide message in png file"
+                       "\n2.Read message from png file"
+                       "\nI choose: ");
 
         scanf("%d", &command);
         char yn = 'n';
 
-        switch(command){
+        switch (command) {
             case 0:
                 printf("\nExiting program ...\n");
                 break;
             case 1:
-                while(yn != 'Y' && yn != 'y'){
+                while (yn != 'Y' && yn != 'y') {
                     printf("\n   Choose file paths - max length 30 chars each\n");
                     printf("a) Source(png) file path: ");
                     scanf("%s", src);
@@ -49,7 +49,7 @@ void appMenu(){
                 hideMsgInFile(src, srcText, dest);
                 break;
             case 2:
-                while(yn != 'Y' && yn != 'y'){
+                while (yn != 'Y' && yn != 'y') {
                     printf("\n   Choose file paths - max length 30 chars each\n");
                     printf("a) Source(png) file path: ");
                     scanf("%s", src);
@@ -71,19 +71,19 @@ void appMenu(){
 
 }
 
-void clear(){
-    #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
-        system("clear");
-    #endif
+void clear() {
+#if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
+    system("clear");
+#endif
 
-    #if defined(_WIN32) || defined(_WIN64)
-        system("cls");
-    #endif
+#if defined(_WIN32) || defined(_WIN64)
+    system("cls");
+#endif
 }
 
 
 void printHeader() {
     printf("  ____   _                              ___          ____ \n / ___| | |_  ___   __ _   ___   _ __  |_ _| _ __   / ___|\n"
-           " \\___ \\ | __|/ _ \\ / _` | / _ \\ | '_ \\  | | | '_ \\ | |    \n  ___) || |_|  __/| (_| || (_) || | | | | | | | | || |___ \n"
-           " |____/  \\__|\\___| \\__, | \\___/ |_| |_||___||_| |_| \\____|\n                   |___/                                  \n");
+                   " \\___ \\ | __|/ _ \\ / _` | / _ \\ | '_ \\  | | | '_ \\ | |    \n  ___) || |_|  __/| (_| || (_) || | | | | | | | | || |___ \n"
+                   " |____/  \\__|\\___| \\__, | \\___/ |_| |_||___||_| |_| \\____|\n                   |___/                                  \n");
 }

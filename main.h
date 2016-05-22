@@ -9,8 +9,11 @@
 #include "src/decode.h"
 
 int main();
+
 void appMenu();
+
 void clear();
+
 void printHeader();
 
 #endif //STEGOINC_MAIN_H

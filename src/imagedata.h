@@ -7,10 +7,10 @@
 
 #include <stdlib.h>
 
-typedef struct ImageDataTag{
-    unsigned char* image;
+typedef struct ImageDataTag {
+    unsigned char *image;
     unsigned width, height;
-    char* filename;
+    char *filename;
     unsigned error;
 } ImageData;
 

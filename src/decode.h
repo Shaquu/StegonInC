@@ -14,7 +14,8 @@
 #include "encode.h"
 
 // Decode png file to rgba pixels array
-bool hideMsgInFile(char* src, char* srcText, char* dest);
-ImageData* decode(char* filename);
+bool hideMsgInFile(char *src, char *srcText, char *dest);
+
+ImageData *decode(char *filename);
 
 #endif //STEGOINC_DECODE_H

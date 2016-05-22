@@ -11,7 +11,8 @@
 #include "lodepng.h"
 #include "decode.h"
 
-void encode(ImageData* data);
-bool readMsgFromFile(char* src, char* destText);
+void encode(ImageData *data);
+
+bool readMsgFromFile(char *src, char *destText);
 
 #endif //STEGOINC_ENCODE_H

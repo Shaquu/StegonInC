@@ -8,8 +8,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* loadFile(const char* filename);
+char *loadFile(const char *filename);
+
 bool saveFile(const char *filename, char *text);
-void printBuffer(char* buffer);
+
+void printBuffer(char *buffer);
 
 #endif //STEGOINC_FILEOP_H

@@ -4,12 +4,12 @@
 
 #include "decode.h"
 
-bool hideMsgInFile(char* src, char* srcText, char* dest){
+bool hideMsgInFile(char *src, char *srcText, char *dest) {
     printf("\n====================hide message in png file====================\n");
     printf("1. Decode start. Load pixels from %s\n\n", src);
 
-    ImageData* data = decode(src);
-    if(data->error){
+    ImageData *data = decode(src);
+    if (data->error) {
         printf("2. Decode error %u: %s\n\n", data->error, lodepng_error_text(data->error));
         return false;
     }
@@ -21,14 +21,14 @@ bool hideMsgInFile(char* src, char* srcText, char* dest){
     clearBits(data);
 
     //load string from txt file
-    char* buffer = loadFile(srcText);
+    char *buffer = loadFile(srcText);
     size_t bufferSize = strlen(buffer);
     printf("3. Text to hide length: %zu\n\n", bufferSize);
 
     size_t bitsSize = bufferSize * 8;
 
-    unsigned char* bitsToWrite = (unsigned char*) malloc (sizeof (unsigned char*) * bitsSize);
-    if(!bitsToWrite)
+    unsigned char *bitsToWrite = (unsigned char *) malloc(sizeof(unsigned char *) * bitsSize);
+    if (!bitsToWrite)
         return false;
 
     printf("4. Setting last bits\n\n");
@@ -40,7 +40,7 @@ bool hideMsgInFile(char* src, char* srcText, char* dest){
     }
     puts("");*/
 
-    if(bitsSize/3 > data->width * data->height){
+    if (bitsSize / 3 > data->width * data->height) {
         printf("5. Not enough pixels to hide your message\n\n");
         return false;
     }
@@ -48,19 +48,19 @@ bool hideMsgInFile(char* src, char* srcText, char* dest){
     seedBits(data, bitsSize, bitsToWrite);
 
     encode(data);
-    if(data->error){
+    if (data->error) {
         printf("5. Encode error %u: %s\n\n", data->error, lodepng_error_text(data->error));
         return false;
     }
     printf("5. Encode finished. File saved.\n\n");
 
-    if(buffer)
+    if (buffer)
         free(buffer);
-    if(data){
+    if (data) {
         free(data->image);
         free(data);
     }
-    if(bitsToWrite)
+    if (bitsToWrite)
         free(bitsToWrite);
 
     printf("6. Data freed.\n\n");
@@ -68,17 +68,16 @@ bool hideMsgInFile(char* src, char* srcText, char* dest){
     return true;
 }
 
-ImageData* decode(char* filename)
-{
+ImageData *decode(char *filename) {
     unsigned error;
-    unsigned char* image;
+    unsigned char *image;
     unsigned width, height;
 
     error = lodepng_decode32_file(&image, &width, &height, filename);
-    if(error)
+    if (error)
         printf("error %u: %s\n", error, lodepng_error_text(error));
 
-    ImageData* data = malloc(sizeof(ImageData));
+    ImageData *data = malloc(sizeof(ImageData));
     data->filename = filename;
     data->width = width;
     data->height = height;
