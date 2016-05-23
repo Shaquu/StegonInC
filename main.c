@@ -19,11 +19,11 @@ void appMenu() {
     char dest[30];
 
     while (command != 0) {
-        printf("\nMENU - type number and click enter"
+        printf(RED "\nMENU - type number and click enter"
                        "\n0.Exit"
                        "\n1.Hide message in png file"
                        "\n2.Read message from png file"
-                       "\nI choose: ");
+                       "\nI choose: " RESET);
 
         scanf("%d", &command);
         char yn = 'n';

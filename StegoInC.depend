@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1461697936 source:c:\users\shaq\clionprojects\stegoinc\main.c
+1463926061 source:c:\users\shaq\clionprojects\stegoinc\main.c
 	"main.h"
 
-1461694394 c:\users\shaq\clionprojects\stegoinc\main.h
+1463926061 c:\users\shaq\clionprojects\stegoinc\main.h
 	<stdio.h>
 	"src/decode.h"
 
-1461600214 c:\users\shaq\clionprojects\stegoinc\src\decode.h
+1463926061 c:\users\shaq\clionprojects\stegoinc\src\decode.h
 	<stdio.h>
 	<stdbool.h>
 	"imagedata.h"
@@ -15,10 +15,10 @@
 	"fileop.h"
 	"encode.h"
 
-1461613685 c:\users\shaq\clionprojects\stegoinc\src\imagedata.h
+1463926061 c:\users\shaq\clionprojects\stegoinc\src\imagedata.h
 	<stdlib.h>
 
-1461599076 c:\users\shaq\clionprojects\stegoinc\src\lodepng.h
+1463926061 c:\users\shaq\clionprojects\stegoinc\src\lodepng.h
 	<string.h>
 	<vector>
 	<string>
@@ -26,41 +26,40 @@
 	<iostream>
 	"lodepng.h"
 
-1461690759 c:\users\shaq\clionprojects\stegoinc\src\bitsop.h
+1463926061 c:\users\shaq\clionprojects\stegoinc\src\bitsop.h
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>
 	"imagedata.h"
 
-1461691749 c:\users\shaq\clionprojects\stegoinc\src\fileop.h
+1463926061 c:\users\shaq\clionprojects\stegoinc\src\fileop.h
 	<stdio.h>
 	<stdlib.h>
 
-1461698076 c:\users\shaq\clionprojects\stegoinc\src\encode.h
+1463926061 c:\users\shaq\clionprojects\stegoinc\src\encode.h
 	<stdio.h>
 	<stdbool.h>
 	"imagedata.h"
 	"lodepng.h"
 	"decode.h"
 
-1461698147 source:c:\users\shaq\clionprojects\stegoinc\src\bitsop.c
+1463926061 source:c:\users\shaq\clionprojects\stegoinc\src\bitsop.c
 	<string.h>
-	<math.h>
 	"bitsop.h"
 
-1461698212 source:c:\users\shaq\clionprojects\stegoinc\src\decode.c
+1463926061 source:c:\users\shaq\clionprojects\stegoinc\src\decode.c
 	"decode.h"
 
-1461698316 source:c:\users\shaq\clionprojects\stegoinc\src\encode.c
+1463926061 source:c:\users\shaq\clionprojects\stegoinc\src\encode.c
 	"encode.h"
 
-1461691774 source:c:\users\shaq\clionprojects\stegoinc\src\fileop.c
+1463926061 source:c:\users\shaq\clionprojects\stegoinc\src\fileop.c
 	<stdbool.h>
 	"fileop.h"
 
 1461613693 source:c:\users\shaq\clionprojects\stegoinc\src\imagedata.c
 
-1461599058 source:c:\users\shaq\clionprojects\stegoinc\src\lodepng.c
+1463926061 source:c:\users\shaq\clionprojects\stegoinc\src\lodepng.c
 	"lodepng.h"
 	<limits.h>
 	<stdio.h>
